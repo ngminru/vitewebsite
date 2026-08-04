@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
-  },
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "deploy": "vite build && find dist -name \"._*\" -delete && git add -f dist && git commit -m \"deploy\" && git subtree push --prefix dist origin gh-pages"
+},
   "devDependencies": {
     "ejs": "^3.1.9",
     "vite": "^6.3.5",
