@@ -29,14 +29,16 @@
 
 // *按鈕顏色 */
 .btn-dark{
-    background-color: $neutral-900;
-    color: #ffffff;
+  background-color: $neutral-900;
+  color: #ffffff;
 }
 .btn-light{
-    border: 1px solid $neutral-900;
+  border: 1px solid $neutral-900;
+  color: $neutral-900;
 }
 .btn-primary-300{
-    background-color: $primary-300;
+  background-color: $primary-300;
+  color: $neutral-900;
 }
 
 
