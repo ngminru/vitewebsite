@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <script type="module" crossorigin src="/vitewebsite/assets/main-BJeE5lja.js"></script>
+    <link rel="stylesheet" crossorigin href="/vitewebsite/assets/main-UAwCORwD.css">
+  </head>
+  <body>
+
+<!-- *頁首區域 -->
+  <!-- 載入herder.ejs部份 -->
+  <!-- 輸入「ejsinc」開啟載入ejs語法 -->
+  <!-- *header 頁首logo導覽列 -->
+<header 
+class="container py-16 py-sm-12 d-flex align-center justify-between
+">
+<!-- 左邊logo列表 -->
+    <ul class="d-flex align-center">
+        <li class="mr-48 ">
+            <a href="../pages/index.html">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d01fc1896a4289f1b03db4258c0cc716b1f4120d/2025-week1/logo.svg" alt="logo">
+                </a>
+        </li>
+        <li class="mr-40 d-md-none">
+            <a href="../pages/products.html" 
+            class="py-12 a-link-light
+            ">商品列表</a>
+        </li>
+        <i class="d-md-none">
+            <a href="../pages/story.html" class="py-12 a-link-light">品牌故事</a>
+        </i>
+        </ul>
+<!-- 右邊會員登入按鈕 -->
+        <a href="../pages/favorites.html" 
+        class="p-12 justify-center align-center">
+            <i class="bi-person a-link-light"></i>
+        </a>
+</header>
+
+<!-- 行動版綠底選單：只有當 isIndex 為 true 時才會渲染 -->
+<!--  -->
+
+<!-- *主要內容 -->
+  <main>
+    <h1 class="index-title">我就說我是首頁hello??</h1>
+    <img src="/vitewebsite/assets/dog-C9XCfHyE.jpg" style="width: 300px;" alt="cat">
+  </main>
+
+<!-- *頁尾區域 -->
+  <!-- 載入footer.ejs部份 -->
+  <!-- 不傳參數時，EJS 會自動預設顯示 AD 區塊 -->
+    <!-- *ad 廣告區域 加入會員9折 -->
+
+    <div class="bg-primary-200 d-flex justify-center align-center py-24">
+        <p class="h4 mr-24">加入會員取得 9 折優惠</p>
+        <a href="#">
+            <button type="button" 
+            class="btn btn-dark
+            ">
+            馬上註冊</button>
+        </a>
+    </div>
+
+
+
+<!-- *footer 頁尾區域 -->
+    <footer class=" bg-neutral-100 py-64 py-md-32">
+        <div class="container">
+<!-- *nav 頁尾 logo導覽列 -->
+            <nav class="d-flex align-center justify-between d-sm-block mb-24">
+                <a href="../pages/index.html" class="mb-sm-8">
+                    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d01fc1896a4289f1b03db4258c0cc716b1f4120d/2025-week1/logo.svg" 
+                    alt="logo">
+                    </a>
+                    <ul class="d-flex d-sm-block px-sm-12">
+                        <li class="mr-40 mr-sm-0 mb-sm-4">
+                            <a href="../pages/products.html" 
+                            class="py-12 a-link-light
+                            ">商品列表</a>
+                        </li>
+                        <li>
+                            <a href="../pages/story.html" 
+                            class="py-12 a-link-light
+                            ">品牌故事</a>
+                        </li>
+                    </ul>
+                </nav>
+<!-- *版權所有 -->
+                <div class="copyright">
+                    <p class="mb-4">Copyright ©2025 URBNSTYLE</p>
+                    <p>All Rights Reserved.</p>
+                </div>
+        </div>
+    </footer>
+  </body>
+</html>
