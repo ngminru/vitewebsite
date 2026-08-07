@@ -4,22 +4,486 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-    <script type="module" crossorigin src="/vitewebsite/assets/main-C-CX89_S.js"></script>
-    <link rel="stylesheet" crossorigin href="/vitewebsite/assets/main-D_ReleUK.css">
+    <title>URBNSTEP 首頁</title>
+    <script type="module" crossorigin src="/vitewebsite/assets/main-BJeE5lja.js"></script>
+    <link rel="stylesheet" crossorigin href="/vitewebsite/assets/main-UAwCORwD.css">
   </head>
   <body>
-    <h1 class="header">header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
-    <h1 class="index-title">我就說我是首頁hello??</h1>
-    <p>到底怎麼才有文章更新啦？？？？？？</p>
-    <p>這樣可以嗎？</p>
-    <p>我試看看神奇指令有沒有成功</p>
-    <p>我修改了package.json看能不能成功IDX!!</p>
-    <img src="/vitewebsite/assets/dog-C9XCfHyE.jpg" style="width: 300px;" alt="cat">
 
-    <footer class="footer">footer</footer>
+    <!-- ================================================= -->
+    <!-- *  week4 任務已完成 -->
+    <!-- ! 首頁index.html 已完成 -->
+    <!-- todo:響應式 已完成 -->
+    <!-- ================================================= -->
+
+<!-- *頁首區域 -->
+  <!-- 載入herder.ejs部份 -->
+  <!-- 輸入「ejsinc」開啟載入ejs語法 -->
+<!-- 首頁：載入 Header 並帶入 isIndex 參數 -->
+<!-- *header 頁首logo導覽列 -->
+<header 
+class="container py-16 py-sm-12 d-flex align-center justify-between
+">
+<!-- 左邊logo列表 -->
+    <ul class="d-flex align-center">
+        <li class="mr-48 ">
+            <a href="../pages/index.html">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d01fc1896a4289f1b03db4258c0cc716b1f4120d/2025-week1/logo.svg" alt="logo">
+                </a>
+        </li>
+        <li class="mr-40 d-md-none">
+            <a href="../pages/products.html" 
+            class="py-12 a-link-light
+            ">商品列表</a>
+        </li>
+        <i class="d-md-none">
+            <a href="../pages/story.html" class="py-12 a-link-light">品牌故事</a>
+        </i>
+        </ul>
+<!-- 右邊會員登入按鈕 -->
+        <a href="../pages/favorites.html" 
+        class="p-12 justify-center align-center">
+            <i class="bi-person a-link-light"></i>
+        </a>
+</header>
+
+<!-- 行動版綠底選單：只有當 isIndex 為 true 時才會渲染 -->
+<!-- 
+
+    <div class=" d-none d-md-block bg-primary-200">
+        <ul class="d-flex">
+            <li class="w-50 text-center">
+                <a href="../pages/products.html" class="d-block py-12">商品列表</a>
+            </li>
+            <li class="w-50 text-center">
+                <a href="../pages/story.html" class="d-block py-12">品牌故事</a>
+        </li>
+        </ul>
+    </div>
+ -->
+
+
+<!-- *header導覽列表 -->
+<header class="header-list mb-md-0 p-md-0 ">
+  <div class="w-50 py-12 bg-primary-200">
+    <a href="../pages/products.html" 
+      class="text-md a-link-light ">商品列表</a>
+    </div>
+  <div class="w-50 py-12 bg-primary-100">
+    <a href="../pages/story.html" 
+    class="text-md a-link-light ">品牌故事</a>
+    </div>
+</header>
+
+<!-- *banner 首圖區域 -->
+  <div class="index-banner ">
+      <div class="container d-flex align-center ">
+          <div class="hero-text-container text-white ">
+              <h2 class="text-display1 text-md-display2 mb-16">URBNSTEP</h2>
+              <h3 class="h3 h5-md mb-48">Your Step, Your Statement</h3>
+              <a href="./products.html">
+                  <button type="button" class="btn btn-primary-300 text-md-md">立即選購</button>
+              </a>
+          </div>
+      </div>
+  </div>
+
+  <main>
+<!-- *main 新品上市 -->
+    <section class="py-64 py-md-40">
+      <div class="container">
+        <h2 class="text-display2 h2-md mb-12 mb-md-8 text-center
+        ">New Arrival</h2>
+        <h3 class="h2 h4-md mb-32 mb-md-24 text-center
+        ">新品上市</h3>
+        <div class="row">
+          <!-- 產品一 -->
+          <div class="col-6 col-md-2">
+            <a href="../pages/products.html" 
+            class="a-link-light 
+            ">
+              <div class="mb-40 mb-md-24">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/new-1.png
+                " alt="Monoverse"
+                class="mb-12 mb-md-8 transform-translateY
+                ">
+                <h4 class="h5 h6-md mb-4 mb-md-0
+                ">Monoverse</h4>
+                <p class="text-md 
+                ">NT$3,600</p>
+              </div>
+            </a>
+          </div>
+          <!-- 產品二 -->
+          <div class="col-6 col-md-2">
+            <a href="../pages/products.html" 
+            class="a-link-light 
+            ">
+              <div class="mb-40 mb-md-24">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/new-2.png
+                " alt="PLATFORM 404"
+                class="mb-12 mb-md-8 transform-translateY
+                ">
+                <h4 class="h5 h6-md mb-4 mb-md-0
+                ">PLATFORM 404</h4>
+                <p class="text-md 
+                ">NT$2,600</p>
+              </div>
+            </a>
+          </div>
+          <!-- 產品三 -->
+          <div class="col-6 col-md-2">
+            <a href="../pages/products.html" 
+            class="a-link-light 
+            ">
+              <div class="mb-40 mb-md-24">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/new-3.png
+                " alt="URBN Force"
+                class="mb-12 mb-md-8 transform-translateY
+                ">
+                <h4 class="h5 h6-md mb-4 mb-md-0
+                ">URBN Force</h4>
+                <p class="text-md 
+                ">NT$3,200</p>
+              </div>
+            </a>
+          </div>
+          <!-- 產品四 -->
+          <div class="col-6 col-md-2">
+            <a href="../pages/products.html" 
+            class="a-link-light 
+            ">
+            <div class="mb-40 mb-md-24">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/new-4.png
+                " alt="Mode90"
+                class="mb-12 mb-md-8 transform-translateY
+                ">
+                <h4 class="h5 h6-md mb-4 mb-md-0
+                ">Mode90</h4>
+                <p class="text-md 
+                ">NT$4,000</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<!-- *hot sale 熱銷補貨 -->
+    <section class="py-64 py-md-40">
+      <div class="container">
+        <h3 class="h2 h4-md mb-16">熱銷補貨</h3>
+        <div class="row flex-md-nowrap product-md-row overflow-x-md-auto Scroll-Snap-md-row
+        ">
+          <!-- 產品一 -->
+          <div class="col-3 product-md-col Scroll-Snap-md-col ">
+            <a href="./products.html" 
+            class="transform-translateY">
+              <div class="product">
+                <span class="tag">人氣 No.1</span>
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-3.png
+                " alt="Melty Kiss">
+              </div>
+            </a>
+          </div>
+          <!-- 產品二 -->
+          <div class="col-3 product-md-col Scroll-Snap-md-col ">
+            <a href="./products.html" 
+            class="transform-translateY">
+              <div class="product">
+                <span class="tag">人氣 No.1</span>
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product.png
+                " alt="PLATFORM 404">
+              </div>
+            </a>
+          </div>
+          <!-- 產品三 -->
+          <div class="col-3 product-md-col Scroll-Snap-md-col ">
+            <a href="./products.html" 
+            class="transform-translateY">
+              <div class="product">
+                <span class="tag">人氣 No.1</span>
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-6.png
+                " alt="R:UNER">
+              </div>
+            </a>
+          </div>
+          <!-- 產品四 -->
+          <div class="col-3 product-md-col Scroll-Snap-md-col ">
+            <a href="./products.html" 
+            class="transform-translateY">
+              <div class="product">
+                <span class="tag">人氣 No.1</span>
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-4.png
+                " alt="BOOMBLOK">
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<!-- *banner-co-branded 廣告橫圖 -->
+    <section class="py-48 py-md-24">
+      <div class="banner-co-branded">
+        <!-- 小區塊一 -->
+        <h3 class="text-display2 h2-md text-white mb-16 d-md-flex flex-md-column gap-md-8
+        ">
+          <span>URBNSTEP</span>
+          <span class="h1 h3-md text-primary-300 px-24
+          ">x</span>
+          <span>Kevin Chen</span>
+        </h3>
+        <!-- 單行文字 -->
+        <h4 class="h2 h5-md text-white mb-32 mb-md-24
+        ">跨界聯名，限量發售</h4>
+        <!-- 小區塊二 -->
+        <p class="text-lg text-md-md text-neutral-500 d-md-flex flex-md-column gap-md-4 mb-48 mb-md-32
+        ">
+          <span>新銳漫畫家 Kevin Chen 親自操刀設計</span>
+          <span class="d-md-none">，</span>
+          <span>街頭能量全面引爆！</span>
+        </p>
+        <!-- button按鈕 -->
+        <a href="./products.html">
+          <button type="button" class="btn btn-primary-300">
+            立即搶購
+          </button>
+        </a>
+        <!-- 裝飾性質圖片 -->
+        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d01fc1896a4289f1b03db4258c0cc716b1f4120d/2025-week3-4/sparkle.svg" 
+        alt="sparkle" 
+        class="sparkle-img">
+        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d01fc1896a4289f1b03db4258c0cc716b1f4120d/2025-week3-4/star.svg" 
+        alt="star" 
+        class="star-img">
+
+      </div>
+
+
+
+
+    </section>
+
+  <!-- *group 依系列選購 -->
+    <section class="py-64 py-md-40">
+      <div class="container">
+        <h3 class="h2 h4-md mb-16">依系列選購</h3>
+        <div class="row">
+          <!-- 系列一 -->
+          <div class="col-3 col-md-2">
+            <a href="./products.html" 
+            class="transform-translateY">
+              <div class="category mb-md-12">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-6.png
+                " alt="URBN RUNNER 慢跑系列" class="">
+                <div class="category-text">
+                  <h4 class="h3 text-lg h6-md mb-8">URBN RUNNER</h4>
+                  <p class="h4 text-lg h6-md">慢跑系列</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 系列二 -->
+          <div class="col-3 col-md-2">
+            <a href="./products.html" 
+            class="transform-translateY">
+              <div class="category mb-md-12">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/product-11.png
+                " alt="STREETMODE 滑板系列" class="">
+                <div class="category-text">
+                  <h4 class="h3 text-lg h6-md mb-8">STREETMODE</h4>
+                  <p class="h4 text-lg h6-md">滑板系列</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 系列三 -->
+          <div class="col-3 col-md-2">
+            <a href="./products.html" 
+            class="transform-translateY">
+              <div class="category">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week2/product-9.png
+                " alt="CHUNK DISTRICT 厚底系列" class="">
+                <div class="category-text">
+                  <h4 class="h3 text-lg h6-md mb-8">CHUNK DISTRICT</h4>
+                  <p class="h4 text-lg h6-md">厚底系列</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 系列四 -->
+          <div class="col-3 col-md-2">
+            <a href="./products.html" 
+            class="transform-translateY">
+              <div class="category">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/product-10.png
+                " alt="COLLAB ZONE 聯名企劃" class="">
+                <div class="category-text">
+                  <h4 class="h3 text-lg h6-md mb-8">COLLAB ZONE</h4>
+                  <p class="h4 text-lg h6-md">聯名企劃</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- *inspiration 穿搭靈感 -->
+  <section class="py-64 py-md-40 mb-48 mb-md-24">
+    <div class="container">
+      <h3 class="h2 h4-md mb-16">穿搭推薦</h3>
+      <!-- 最外層的 inspiration-row 12格線 -->
+      <!-- 行動版滾動條樣式 overflow-x-md-auto -->
+      <div class="inspiration-row overflow-x-md-auto Scroll-Snap-md-row">
+        <!-- 外層的inspiration-col-4 佔四格 -->
+        
+        <!-- 區塊一 -->
+        <div class="inspiration-col-4 Scroll-Snap-md-col">
+          <!-- 內層的inspiration-row 也分12格線 -->
+          <div class="inspiration-row Scroll-Snap-md-row">
+
+            <!-- 圖片一 內層的inspiration-col-6 佔六格 -->
+            <div class="inspiration-col-6 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-1.png
+                " alt="穿搭靈感-1">
+            </div>
+            <!-- 圖片二 內層的inspiration-col-6 佔六格 -->
+            <div class="inspiration-col-6 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-2.png
+                " alt="穿搭靈感-2">
+            </div>
+            <!-- 圖片三 內層的inspiration-col-12 佔十二格 -->
+            <div class="inspiration-col-12 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-3.png
+                " alt="穿搭靈感-3">
+            </div>
+          </div>
+        </div>
+
+        <!-- 區塊二 -->
+        <div class="inspiration-col-4 ">
+          <!-- 內層的inspiration-row 也分12格線 -->
+          <div class="inspiration-row Scroll-Snap-md-row">
+
+            <!-- 圖片一 內層的inspiration-col-6 佔六格 -->
+            <div class="inspiration-col-6 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-4.png
+                " alt="穿搭靈感-4">
+            </div>
+
+            <!-- 圖片二 內層的inspiration-col-6 佔六格 -->
+            <div class="inspiration-col-6 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-5.png
+                " alt="穿搭靈感-5">
+            </div>
+
+            <!-- 圖片三 內層的inspiration-col-6 佔六格 -->
+            <div class="inspiration-col-6 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-6.png
+                " alt="穿搭靈感-6">
+            </div>
+
+            <!-- 圖片四 內層的inspiration-col-6 佔六格 -->
+            <div class="inspiration-col-6 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-7.png
+                " alt="穿搭靈感-7">
+            </div>
+
+            <!-- 圖片五 內層的inspiration-col-6 佔六格 -->
+            <div class="inspiration-col-6 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-8.png
+                " alt="穿搭靈感-8">
+            </div>
+
+            <!-- 圖片六 內層的inspiration-col-6 佔六格 -->
+            <div class="inspiration-col-6 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-9.png
+                " alt="穿搭靈感-9">
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 區塊三 -->
+        <div class="inspiration-col-4 ">
+          <!-- 內層的inspiration-row 也分12格線 -->
+          <div class="inspiration-row Scroll-Snap-md-row">
+
+            <!-- 圖片一 內層的inspiration-col-12 佔十二格 -->
+            <div class="inspiration-col-12 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-10.png
+                " alt="穿搭靈感-10">
+            </div>
+            <!-- 圖片二 內層的inspiration-col-6 佔六格 -->
+            <div class="inspiration-col-6 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-11.png
+                " alt="穿搭靈感-11">
+            </div>
+            <!-- 圖片三 內層的inspiration-col-6 佔六格 -->
+            <div class="inspiration-col-6 Scroll-Snap-md-col">
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/inspiration-12.png
+                " alt="穿搭靈感-12">
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </section>
+  
+  </main>
+<!-- *頁尾區域 -->
+  <!-- 載入footer.ejs部份 -->
+  <!-- 不傳參數時，EJS 會自動預設顯示 AD 區塊 -->
+    <!-- *ad 廣告區域 加入會員9折 -->
+
+    <div class="bg-primary-200 d-flex justify-center align-center py-24">
+        <p class="h4 mr-24">加入會員取得 9 折優惠</p>
+        <a href="#">
+            <button type="button" 
+            class="btn btn-dark
+            ">
+            馬上註冊</button>
+        </a>
+    </div>
+
+
+
+<!-- *footer 頁尾區域 -->
+    <footer class=" bg-neutral-100 py-64 py-md-32">
+        <div class="container">
+<!-- *nav 頁尾 logo導覽列 -->
+            <nav class="d-flex align-center justify-between d-sm-block mb-24">
+                <a href="../pages/index.html" class="mb-sm-8">
+                    <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/d01fc1896a4289f1b03db4258c0cc716b1f4120d/2025-week1/logo.svg" 
+                    alt="logo">
+                    </a>
+                    <ul class="d-flex d-sm-block px-sm-12">
+                        <li class="mr-40 mr-sm-0 mb-sm-4">
+                            <a href="../pages/products.html" 
+                            class="py-12 a-link-light
+                            ">商品列表</a>
+                        </li>
+                        <li>
+                            <a href="../pages/story.html" 
+                            class="py-12 a-link-light
+                            ">品牌故事</a>
+                        </li>
+                    </ul>
+                </nav>
+<!-- *版權所有 -->
+                <div class="copyright">
+                    <p class="mb-4">Copyright ©2025 URBNSTYLE</p>
+                    <p>All Rights Reserved.</p>
+                </div>
+        </div>
+    </footer>
   </body>
 </html>
