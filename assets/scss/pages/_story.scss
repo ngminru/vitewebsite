@@ -1,0 +1,47 @@
+
+.header{
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week1/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 152px 0;
+}
+
+/* *行動版 hero樣式 */
+/* 斷點設在767px */
+@media (max-width:767px){
+  .header{
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/hero-sm.png);
+    padding: 87px 0;
+  }
+}
+/* *行動版 走出城市的節奏 樣式 */
+/* 斷點設在767px */
+@media (max-width:767px){
+  .quote4{
+    text-align: left;
+  }
+}
+
+/* 品牌簡介圖片範圍 */
+.intro img{
+  max-width:1076px;
+  margin-left: -100px;
+  margin-right:-100px;
+}
+
+/* a連結設定 */
+.story a{
+    font-weight:500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    color: var(--primary-400);
+    /* 開啟a連結底線 */
+    text-decoration: underline; 
+  /* 控制底線偏移距離 */
+  text-underline-offset: 4px;
+  display: block;
+}
+

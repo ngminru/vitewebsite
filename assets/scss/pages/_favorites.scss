@@ -1,0 +1,50 @@
+/* ========================================== */
+/* *    favorites.css                              */
+/* ========================================== */
+
+/* *我的收藏勾勾 */
+/* 40x40 圓形綠色 Icon 容器 */
+.icon-circle{
+    width: 40px;
+    width: 40px;
+    background-color: var(--primary-300);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.icon-circle .bi{
+    padding-right: 0;
+    font-size: 20px;
+    color: var(--primary-500);
+    line-height: 1;
+}
+.favorite-text{
+    font-size: 20px;
+}
+
+/* *行動版  我的收藏勾勾 樣式 */
+/* 斷點設在767px */
+@media(max-width:767px){
+    .icon-md-circle{
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+/* *小貨車icons */
+.bi-truck{
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 12px;
+    color: var(--primary-400);
+    font-size: 24px;
+}
+
+/* *我的收藏圖片 */
+.card img{
+    max-width: 120px;
+}

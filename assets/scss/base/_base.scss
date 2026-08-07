@@ -1,0 +1,137 @@
+
+/* ========================================== */
+// * ↓↓標籤的基本base樣式 */
+/* ========================================== */
+
+/* *設定box-sizing */
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+/* *img圖片設定 */
+img{
+    /* display: block; */
+    /* 消除img下方的空白 */
+    vertical-align: middle;
+    /* 設定圖片寬度顯示為100% */
+    max-width: 100%;
+    /* 設定圖片高度為auto，避免變形 */
+    height: auto;
+}
+
+/* *主體body文字樣式 */
+/* Letter spacin:5% 的意思是「0.05em」 */
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.05em ;
+    color: $neutral-900;
+}
+
+/* * a標籤 連結樣式 */
+a {
+    color: $neutral-900;
+    text-decoration: none;
+  /* 使a連結具備區塊block元素特性 */
+    display: block;
+    font-weight: 500;
+}
+
+/* 連結 hover（滑鼠懸停）樣式 */
+/* 背景顏色變化 */
+.a-hover:hover{
+    background-color: $primary-300;
+}
+
+/* 文字類連結（純文字、導覽列） */
+*.a-link-light {
+    color: $neutral-900;
+    transition: color 0.2s ease-in-out;
+}
+.a-link-light:hover {
+    color: $primary-400;
+    font-weight: 700;
+    font-style: bold;
+}
+/* 滑鼠滑過 (hover) 時變更顏色 */
+.a-link-dark a:hover {
+  color: $neutral-900;
+  font-weight: bold; 
+}
+
+/* 滑鼠滑過 (hover) 時變更顏色 */
+.category-menu a:hover {
+  color: $neutral-900;
+  font-weight: bold;
+}
+
+// *文字稍微放大的酷酷效果
+/* 滑鼠滑過 (hover) 時文字稍微放大1.05倍 */
+.a-link-transform {
+  display: inline-block;
+  text-decoration: underline;
+  
+  // 關鍵 1：設定放大基準點在「左側」
+  transform-origin: left center; 
+  
+  // 轉場動畫
+  transition: transform 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    // 關鍵 2：只做純放大，不加上任何位移
+    transform: scale(1.05); 
+    font-weight: bold;
+  }
+}
+
+/* 動態底線 (Animated Underline) */
+.hover-underline {
+  position: relative;
+  color: $neutral-900;
+}
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: $primary-400;
+  transition: width 0.3s ease;
+}
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+// *圖片稍微放大的酷酷效果
+// 透過 transition 加上微幅向上位移 (translateY) 與圖片放大的效果
+.transform-translateY {
+  display: block;
+  position: relative; // 👈 關鍵：作為 .tag 的定位參考點
+  text-decoration: none;
+  color: inherit;
+  // border-radius: 8px;
+  // 四周8px圓角
+  overflow: hidden; // 圖片放大的溢出裁切
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  // 圖片放大效果
+  img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+
+    img {
+      transform: scale(1.06);
+    }
+  }
+}
+
+
+

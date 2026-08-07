@@ -1,0 +1,69 @@
+/* ========================================== */
+// *    button按鈕元件                         */
+/* ========================================== */
+
+
+// *設定按鈕樣式 */
+/* 圓角4px的按鈕 */
+.btn{
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    /* 把按鈕游標更改成手指圖示 */
+    cursor: pointer;
+    /* 無border邊線 */
+    border: none;
+    /* 背景色為透明 */
+    background-color: transparent;
+}
+
+// *行動版  按鈕樣式 */
+/* 斷點設在576px */
+@media(max-width:576px){
+    .btn{
+        padding: 8px 16px;
+    }
+}
+
+// *按鈕顏色 */
+.btn-dark{
+    background-color: $neutral-900;
+    color: #ffffff;
+}
+.btn-light{
+    border: 1px solid $neutral-900;
+}
+.btn-primary-300{
+    background-color: $primary-300;
+}
+
+
+// *按鈕稍放大的酷酷效果
+// 做法 A：獨立原子類別 (可隨意加在任何按鈕/元素上)
+.btn-hover-scale {
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform-origin: center center; // 預設以正中央為基準放大
+
+  &:hover {
+    transform: scale(1.05); // 滑鼠懸停：微幅放大 1.05 倍
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); // 加深微陰影讓質感更好
+  }
+
+  &:active {
+    transform: scale(0.98); // 滑鼠按下去：微幅縮小，打造真實按壓感
+  }
+}
+
+// 做法 B：如果是 Bootstrap 體系，也可以直接寫進基礎 .btn 裡面
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}

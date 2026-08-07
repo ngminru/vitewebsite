@@ -1,0 +1,34 @@
+/* ========================================== */
+// *    麵包屑元件                              */
+/* ========================================== */
+
+
+/*  *斜線分隔符號 */
+.breadcrumb-item + .breadcrumb-item::before{
+    /* 分隔符號內容為「斜線」 */
+    content: "/";
+    padding: 0 12px;
+    color: $neutral-300;
+    font-weight: 700;
+}
+/* *設定斜線與項目 */
+.breadcrumb-item{
+    display: flex;
+    font-weight: 500;
+}
+
+.breadcrumb-link{
+    color: $neutral-600;
+}
+
+// *行動版  有序清單樣式 */
+/* 斷點設在767px */
+@media(max-width: 767px){
+    .breadcrumb-item + .breadcrumb-item::before{
+        padding: 0 8px;
+    }
+    /* 設定文字大小 */
+    .breadcrumb-item{
+        font-size: 14px;
+    }
+}

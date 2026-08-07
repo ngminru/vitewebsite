@@ -1,3 +1,241 @@
-.index-title {
-  font-size: 100px;
+
+//*header 樣式 */
+// .header-pc {
+  // }
+  .header-list{
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+// 電腦版預設隱藏 */
+    display: none;
+
+// 當螢幕寬度小於等於 768px (行動版) 時才顯示
+  @media (max-width: 768px) {
+    display: flex;
+    text-align: center;
+    width: 100%;
+  }
+
+}
+.w-50{
+  width: 50%;
+}
+
+
+.index-banner{
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: left;
+    padding: 289px;
+    max-width: 100%;
+}
+
+/* *行動版 hero樣式 */
+/* 斷點設在767px */
+@media (max-width:767px){
+  .index-banner{
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-sm.png);
+    padding: 87px 0;
+  }
+}
+
+.hero-text-container{
+    /* max-width: 100%; */
+}
+
+// 絕對定位
+.product{
+  position: relative;
+
+ // 人氣 No.1 標籤
+  .tag{
+    position: absolute;
+    top: 0;
+    left: 0;
+    // ↓確保標籤浮在圖片最上層
+    z-index: 2; 
+    padding: 8px 12px;
+    background-color: $primary-100;
+    font-size: 14px;
+    color: $primary-400;
+  }
+}
+
+// 行動版滾動條列樣式
+@media (max-width:767px) {
+  .product-md-row{
+    margin-right: -8px;
+    margin-left: -8px;
+  }
+  .product-md-col{
+    min-width: 316px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}
+
+// hot sale 熱銷補貨
+.banner-co-branded{
+  text-align: center;
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-co-branded.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  // 父層容器設relative作為定位點(for裝飾用圖示)
+  position: relative;
+  
+  // 按鈕設定
+  .btn{
+    padding: 12px 24px;
+  }
+
+  // *裝飾用圖示(子層)
+  // star圖示
+  .star-img{
+    // 絕對定位
+    position: absolute;
+    // 圖片大小
+    width: 48px;
+    // 圖片距離上方
+    top: 68px;
+
+    // * star定位位置算法一
+    // 文字中心到左邊緣(Urbinster x kevin chen) 634/2=317px
+    // 文字左邊緣到星星圖示的間距 32px
+    // 星星圖示本身的寬度 48px
+    // 總共需向左推的距離 317+32+48 = 397px
+    // 以父容器左上角為起點，先推到中央 $50%，再減去計算出來的總距離 397px：
+    left: calc(50% - 397px);
+
+    // *算法二
+    // 1. 定位點設在星星的「右邊界」位置 (50% - 317px - 32px)
+    // left: calc(50% - 349px);
+    // 2. 將星星向左推回自身 100% 寬度
+    // transform: translateX(-100%);
+  }
+
+  // sparkle圖示
+  .sparkle-img{
+    position: absolute;
+    width: 76px;
+    // 圖片距離下方
+    bottom: 132px;
+
+  // * sparkle定位位置算法一
+      // 文字中心到左邊緣(Urbinster x kevin chen) 634/2=317px
+    // 圖片超出寬度  40px
+    // 總共需向左推的距離 317-40 = 277 px
+    // 以父容器右下角為起點，先推到中央 $50%，再加上計算出來的總距離 277px：
+    // left: calc(50% + 277px);
+    
+    // *算法二
+    // 從右邊計算位置
+    // 以父容器右下角為起點，先推到中央 $50%，再減去計算出來的總距離 317+40 px：
+    right: calc(50% - 317px - 40px);
+  }
+}
+
+// 行動版 hot sale 熱銷補貨 樣式
+@media (max-width:767px) {
+  .banner-co-branded{
+    padding: 64px 0;
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-co-branded-sm.png);
+    // overflow 超出的部份直接隱藏 hidden
+    overflow: hidden;
+
+    // 裝飾圖示位置
+    .star-img{
+      top: 32px;
+      // 左邊超出去尺吋 20px
+      left: -20px;
+    }
+    .sparkle-img{
+      bottom: 104px;
+      // 右邊超出去尺吋 28px
+      right: -28px;
+    }
+  }
+}
+
+// 依系列選定樣式
+.category{
+  // 父層容器設relative作為定位點
+  position: relative;
+// !巢狀選擇器使用
+  &-text{
+    // (子層)文字部份套用絕對定位
+    position: absolute;
+    // 覆蓋整個父層
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // ↓確保標籤浮在圖片最上層
+    z-index: 2; 
+    // 背景黑色，透明度40%
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    // 文字顏色
+    color: white;
+    // 文字位置
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// *穿搭靈感格線樣式
+// !巢狀選擇器使用
+.inspiration{
+  // 「&」代表上面父選擇器本身，意思等同「.inspiration-row」
+  &-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4px;
+  }
+
+  // 每個區塊佔四欄
+  &-col-4{
+    width: calc(100% / 12 * 4);
+    padding: 4px;
+  }
+  // 每個區塊佔六欄
+  &-col-6{
+    width: calc(100% / 12 * 6);
+    padding: 4px;
+  }
+  // 每個區塊佔十二欄
+  &-col-12{
+    width: 100%;
+    padding: 4px;
+  }
+}
+
+
+// *行動版 穿搭推薦 滾動條樣式
+@media (max-width:767px) {
+  // 滾動條尺吋樣式
+  .inspiration-row{
+    // 不換行
+    flex-wrap: nowrap;
+    margin: 0 -8px;
+    // 圖片最小300px
+    img{
+      min-width: 300px;
+    }
+  }
+  // 清除預設的電腦版寬度樣式
+  .inspiration-col-4,
+  .inspiration-col-6,
+  .inspiration-col-12{
+    width: unset;
+    padding: 0 8px;
+  }
 }

@@ -1,0 +1,23 @@
+/* ========================================== */
+// *    products樣式                          */
+/* ========================================== */
+/* 設定客製化樣式 */
+
+/* 設定「所有商品」樣式 */
+.category .active{
+    color: $primary-400;
+}
+
+/* 設定 page-item 「綠色按鈕」樣式 */
+.page-item .btn{
+    padding: 8px 15px;
+    border-radius: 0;
+    font-weight: 400;
+
+}
+/* 起用樣式 */
+.page-item .active{
+    background-color: $primary-300;
+    /* 起用樣式字重 */
+    font-weight: 500;
+}

@@ -1,0 +1,84 @@
+/* ========================================== */
+// * 基礎 variables 變數設定 */
+/* ========================================== */
+
+/* ✔ color根顏色目錄*/
+// *使用「$」符號設定scss顏色
+
+$neutral-0:#ffffff;
+$neutral-100:#F8F9FA;
+$neutral-300:#DEE2E6;
+$neutral-500:#ADB5BD;
+$neutral-600:#6C757D;
+$neutral-900:#212529;
+
+$primary-100:#F5FEE7;
+$primary-200:#E8FEC5;
+$primary-300:#C0FA73;
+$primary-400:#57A203;
+$primary-500:#477A11;
+
+$danger-300:#D74F4F;
+
+
+
+
+
+
+
+// *設定文字通用顏色 
+
+.text-white{
+    color: $neutral-0;
+}
+/* neutral */
+.text-neutral-100{
+    color: $neutral-100;
+}
+.text-neutral-300{
+    color: $neutral-300;
+}
+.text-neutral-500{
+    color: $neutral-500;
+}
+.text-neutral-600{
+    color: $neutral-600;
+}
+.text-neutral-900{
+    color: $neutral-900;
+}
+/* primary */
+.text-primary-100{
+    color: $primary-100;
+}
+.text-primary-200{
+    color: $primary-200;
+}
+.text-primary-300{
+    color: $primary-300;
+}
+.text-primary-400{
+    color: $primary-400;
+}
+/* danger */
+.text-danger-300{
+    color: $danger-300;
+}
+
+/* * 背景底色 */
+.bg-neutral-100{
+    background-color: $neutral-100;
+}
+.bg-primary-100{
+    background-color: $primary-100;
+}
+.bg-primary-200{
+    background-color: $primary-200;
+}
+.bg-primary-300{
+    background-color: $primary-300;
+}
+
+
+
+
