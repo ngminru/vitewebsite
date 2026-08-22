@@ -103,35 +103,3 @@ a {
 .hover-underline:hover::after {
   width: 100%;
 }
-
-// *圖片稍微放大的酷酷效果
-// 透過 transition 加上微幅向上位移 (translateY) 與圖片放大的效果
-.transform-translateY {
-  display: block;
-  position: relative; // 👈 關鍵：作為 .tag 的定位參考點
-  text-decoration: none;
-  color: inherit;
-  // border-radius: 8px;
-  // 四周8px圓角
-  overflow: hidden; // 圖片放大的溢出裁切
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  // 圖片放大效果
-  img {
-    width: 100%;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
-
-    img {
-      transform: scale(1.06);
-    }
-  }
-}
-
-
-
